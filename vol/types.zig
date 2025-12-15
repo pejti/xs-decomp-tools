@@ -77,7 +77,7 @@ pub const Footer = extern struct {
     guid_machine: std.os.windows.GUID,
     flag_32: u32 = flag_32_default,
     filetime: std.os.windows.FILETIME,
-    length_of_last_chunk: u16,
+    length_of_last_chunk: u16, // akimbo.vol has length longer than u16 (01F7C8)
     flag_16: u16 = flag_16_default,
     signature: [8]u8 = chaos_works_signature,
 
